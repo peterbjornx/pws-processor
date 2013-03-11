@@ -45,15 +45,15 @@ signal cmp_eq_i,
 
 begin
 
-arith_a <= '0' & a;
-arith_b <= '0' & b;
+arith_a <= a(31) & a;
+arith_b <= b(31) & b;
 arith_c <= x"0000000" & '000' & a;
 
 res_add <= signed(arith_a) + signed(arith_b) + signed(arith_c);
 
 res_add_v <= std_logic_vector(res_add);
 
-res_sub <= signed(arith_a) - (signed(arith_b) + signed(arith_c));
+res_sub <= signed(arith_a | sign) - (signed(arith_b) + signed(arith_c));
 
 res_sub_v <= std_logic_vector(res_sub);
 
