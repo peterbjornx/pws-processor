@@ -8,7 +8,7 @@ entity ifetch_state is
 port(
   clock_p1, reset : in std_logic;
   cia_we, nia_we, lr_we, ir_we : out std_logic;
-  addr_source, execute : out std_logic;
+  addr_source, execute_sig : out std_logic;
   store_lr : in std_logic
 );
 end ifetch_state;
@@ -39,7 +39,7 @@ begin
  		addr_source <=	'1'			when load_cia_fetch,	--addr <= nia
 							'0'			when others;			--addr <= alu_result
  	with state select
- 		execute  	<=	'1'      when execute,			
+ 		execute_sig  	<=	'1'      when execute,			
                     '0'			when others;		 
  	with state select
  		nia_we		<=	'1'			when load_nia,

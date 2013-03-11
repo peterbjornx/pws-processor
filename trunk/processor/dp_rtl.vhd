@@ -46,9 +46,9 @@ architecture rtl of dp is
       a,
       b : IN std_logic_vector(WIDTH-1 downto 0);
       c : OUT std_logic_vector(WIDTH-1 downto 0);
-      cmp_eq, cmp_lt, cmp_gt : OUT std_logic
-      carry_in IN std_logic;
-      carry_out OUT std_logic);
+      cmp_eq, cmp_lt, cmp_gt : OUT std_logic;
+      carry_in : IN std_logic;
+      carry_out : OUT std_logic);
   end component;
 
 
@@ -82,7 +82,7 @@ architecture rtl of dp is
          mux_b,
          mux_c,
          imm_val,
-         alu_out,
+         alu_out
 : std_logic_vector(WIDTH-1 downto 0);
   
   signal ra,
@@ -107,9 +107,9 @@ begin
   
   carry_in <= cr(3) and carry_enable;
   
-  cr_we_2 <= execute & (carry_enable or cr_we);
+  cr_we_2 <= execute and (carry_enable or cr_we);
   
-  ra_we_2 <= execute & ra_we;
+  ra_we_2 <= execute and ra_we;
   
   cr_in <= x"0000000" & '0' & cmp_gt & cmp_eq & cmp_lt;
   cr_ca <= x"0000000" & carry_out & cr(2 downto 0); 

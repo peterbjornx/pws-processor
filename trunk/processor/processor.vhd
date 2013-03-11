@@ -71,7 +71,7 @@ architecture parch of processor is
 				port(
 				  clock_p1, reset : in std_logic ;
 				  cia_we, nia_we, lr_we, ir_we : out std_logic;
-				  addr_source, execute: out std_logic;
+				  addr_source, execute_sig: out std_logic;
 				  store_lr: in std_logic
 				);
 	end component;
@@ -140,7 +140,7 @@ begin
 									lr_we, 
 									ir_we,
 									addr_source,
-                  execute
+                  execute,
 									store_lr);
 	id_inst : idec port map(clock,
 									reset,

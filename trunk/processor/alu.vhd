@@ -11,9 +11,9 @@ port (mux_a: IN std_logic_vector(2 downto 0);
       a,
       b : IN std_logic_vector(WIDTH-1 downto 0);
       c : OUT std_logic_vector(WIDTH-1 downto 0);
-      cmp_eq, cmp_lt, cmp_gt : OUT std_logic
-      carry_in IN std_logic;
-      carry_out OUT std_logic;
+      cmp_eq, cmp_lt, cmp_gt : OUT std_logic;
+      carry_in : IN std_logic;
+      carry_out : OUT std_logic
 );
 end palu;
 
@@ -26,15 +26,15 @@ signal arith_a,
 
 signal res_add,
        res_sub : signed(WIDTH downto 0);
-       
+signal res_add_v,
+       res_sub_v : std_logic_vector(WIDTH downto 0);
+               
 signal res_mul : signed((WIDTH * 2) - 1 downto 0);
 
 signal  res_or,
         res_and,
         res_xor,
         res_nand,
-        res_add_v,
-        res_sub_v,
         res_zero : std_logic_vector(WIDTH-1 downto 0);
         
 signal  res_mul_v : std_logic_vector((WIDTH * 2) - 1 downto 0);
@@ -47,13 +47,13 @@ begin
 
 arith_a <= a(31) & a;
 arith_b <= b(31) & b;
-arith_c <= x"0000000" & '000' & a;
+arith_c <= x"00000000" & carry_in;
 
 res_add <= signed(arith_a) + signed(arith_b) + signed(arith_c);
 
 res_add_v <= std_logic_vector(res_add);
 
-res_sub <= signed(arith_a | sign) - (signed(arith_b) + signed(arith_c));
+res_sub <= signed(arith_a) - (signed(arith_b) + signed(arith_c));
 
 res_sub_v <= std_logic_vector(res_sub);
 
@@ -76,8 +76,8 @@ with mux_a select
         res_and                     when "001",
         res_xor                     when "010",
         res_nand                    when "011",
-        res_add(31 downto 0)   	    when "100",
-        res_sub(31 downto 0)   	    when "101",
+        res_add_v(31 downto 0)   	    when "100",
+        res_sub_v(31 downto 0)   	    when "101",
         res_mul_v(31 downto 0)      when "110",--was mul
         res_zero                    when "111",
         (others => '-')             when others;
@@ -91,7 +91,7 @@ with mux_a select
         res_sub(32)     	    when "101",
         '-'		            when "110",--was mul
         '-'                         when "111",
-        (others => '-')             when others;
+        '-'                  when others;
         
 cmp_eq_i <= '1' when res_sub = x"00000000" else '0';
 cmp_lt_i <= res_sub(WIDTH - 1);
