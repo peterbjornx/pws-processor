@@ -13,6 +13,7 @@ port(
   lr_jump,
   mux_b_enable,
   imm_signed,
+  carry_enable,
   cr_we,
   bus_rw,
   mem_read : out std_logic;
@@ -86,7 +87,7 @@ begin
 	
 	compare_op		<= ir_aluop(0) and ir_aluop(1);		--Compare doesnt store result	
 	cr_we				<= arith_op and compare_op;
-	
+	carry_enable <= ir_carry_enable;
 	--TODO: Carry handling
 	
 	--Start of branch instruction decoding
