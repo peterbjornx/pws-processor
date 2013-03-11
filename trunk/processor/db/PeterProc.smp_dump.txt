@@ -1,0 +1,10 @@
+
+State Machine - |psystem|curr_state
+Name curr_state.s5 curr_state.s4 curr_state.s3 curr_state.s2 curr_state.s1 curr_state.s0 curr_state.start 
+curr_state.start 0 0 0 0 0 0 0 
+curr_state.s0 0 0 0 0 0 1 1 
+curr_state.s1 0 0 0 0 1 0 1 
+curr_state.s2 0 0 0 1 0 0 1 
+curr_state.s3 0 0 1 0 0 0 1 
+curr_state.s4 0 1 0 0 0 0 1 
+curr_state.s5 1 0 0 0 0 0 1 

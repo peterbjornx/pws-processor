@@ -1,0 +1,529 @@
+m255
+K3
+13
+cModel Technology
+d/home/markwestmijze/altera/12.1/modelsim_ase/linux
+Ealu
+Z0 w1362744727
+Z1 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 d/mnt/extrastor/pws/pproc/modelsim
+Z6 8/mnt/extrastor/pws/pproc/alu_rtl.vhd
+Z7 F/mnt/extrastor/pws/pproc/alu_rtl.vhd
+l0
+L8
+VVPX3iZz8Gidh=1HF6U`GN1
+Z8 OV;C;10.1b;51
+32
+Z9 !s108 1362963471.690031
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/alu_rtl.vhd|
+Z11 !s107 /mnt/extrastor/pws/pproc/alu_rtl.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 I1R[lA@oX6[R1O<8A=LaX3
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 VPX3iZz8Gidh=1HF6U`GN1
+l28
+L19
+VZBK63mB4d4d3ZlO;]Hloh2
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 nTbz?0`;@OL?l?Ii`bTBB3
+!i10b 1
+Ebram
+Z14 w1362744727
+R3
+R4
+R5
+Z15 8/mnt/extrastor/pws/pproc/bram.vhd
+Z16 F/mnt/extrastor/pws/pproc/bram.vhd
+l0
+L42
+V_HG:b=TR7J48bfObLO;RS3
+R8
+32
+Z17 !s108 1362963471.982223
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/bram.vhd|
+Z19 !s107 /mnt/extrastor/pws/pproc/bram.vhd|
+R12
+R13
+!s100 ZLU^N_d=Wb37g8WSD8IfK0
+!i10b 1
+Asyn
+R3
+R4
+DEx4 work 4 bram 0 22 _HG:b=TR7J48bfObLO;RS3
+l94
+L55
+VTF7MDAb2jliLBSTA7b;R62
+R8
+32
+R17
+R18
+R19
+R12
+R13
+!s100 zi1dCc@]f][BB7>IOPe2>1
+!i10b 1
+Eclock
+R14
+R3
+R4
+R5
+Z20 8/mnt/extrastor/pws/pproc/clock.vhd
+Z21 F/mnt/extrastor/pws/pproc/clock.vhd
+l0
+L100
+V4PCkk_N9VEYm0WTA_:dO]0
+R8
+32
+Z22 !s108 1362963472.258613
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/clock.vhd|
+Z24 !s107 /mnt/extrastor/pws/pproc/clock.vhd|
+R12
+R13
+!s100 4gRbEkQ4`IM@@:<P<0HP=0
+!i10b 1
+Artl
+R3
+R4
+DEx4 work 5 clock 0 22 4PCkk_N9VEYm0WTA_:dO]0
+l131
+L109
+VVcQ=D`TQPmF<<0omPXVF@3
+R8
+32
+R22
+R23
+R24
+R12
+R13
+!s100 V?`WGNTU6`5NH5;IYnB@V3
+!i10b 1
+Eclock_altclkctrl_6df
+R14
+R3
+R4
+R5
+R20
+R21
+l0
+L46
+VX`M6]H=Gd=io6BFZ0ezjY2
+R8
+32
+R22
+R23
+R24
+R12
+R13
+!s100 d5mWX3<bg6TTC8Xc^PYej2
+!i10b 1
+Artl
+R3
+R4
+DEx4 work 20 clock_altclkctrl_6df 0 22 X`M6]H=Gd=io6BFZ0ezjY2
+l76
+L56
+V4zQY5Fh;eC7hQEW]W>K0m1
+R8
+32
+R22
+R23
+R24
+R12
+R13
+!s100 1V1e]cbRL?e^lZSzQIkNe1
+!i10b 1
+Edp
+Z25 w1362964770
+R1
+R2
+R3
+R4
+R5
+Z26 8/mnt/extrastor/pws/pproc/dp_rtl.vhd
+Z27 F/mnt/extrastor/pws/pproc/dp_rtl.vhd
+l0
+L8
+Vbh;7FEP`@Xj<L6G:Fm`W]2
+R8
+32
+Z28 !s108 1362964950.470463
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/dp_rtl.vhd|
+Z30 !s107 /mnt/extrastor/pws/pproc/dp_rtl.vhd|
+R12
+R13
+!s100 Ne:ICS<Ue4fzZN<>>CmCX2
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+DEx4 work 2 dp 0 22 bh;7FEP`@Xj<L6G:Fm`W]2
+l89
+L39
+Vg476GAKKDC4R9nBd8DSiM1
+R8
+32
+R28
+R29
+R30
+R12
+R13
+!s100 IQ9^LVUJoPz:DAdecP8R=2
+!i10b 1
+Eidec
+Z31 w1362744728
+R2
+R3
+R4
+R5
+Z32 8/mnt/extrastor/pws/pproc/idec.vhd
+Z33 F/mnt/extrastor/pws/pproc/idec.vhd
+l0
+L7
+VLWHXMGjcT]jKEIfW5h11g3
+R8
+32
+Z34 !s108 1362963472.545939
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/idec.vhd|
+Z36 !s107 /mnt/extrastor/pws/pproc/idec.vhd|
+R12
+R13
+!s100 `dQm0XI@>]VO[LkeCIP]D1
+!i10b 1
+Aidec_cl
+R2
+R3
+R4
+DEx4 work 4 idec 0 22 LWHXMGjcT]jKEIfW5h11g3
+l46
+L27
+V6_F70MGc@S@SO2<0`;KIU0
+R8
+32
+R34
+R35
+R36
+R12
+R13
+!s100 gJa5C?<8m3kj_3lzAloBe1
+!i10b 1
+Eifetch_state
+Z37 w1362964768
+R2
+R3
+R4
+R5
+Z38 8/mnt/extrastor/pws/pproc/ifetch.vhd
+Z39 F/mnt/extrastor/pws/pproc/ifetch.vhd
+l0
+L7
+VkOz8dof;=eJ87`Zoz^4QM1
+R8
+32
+Z40 !s108 1362964948.636886
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/ifetch.vhd|
+Z42 !s107 /mnt/extrastor/pws/pproc/ifetch.vhd|
+R12
+R13
+!s100 B^HLkOFm7<Vk:=4e6z5N02
+!i10b 1
+Aifetch_state_arch
+R2
+R3
+R4
+DEx4 work 12 ifetch_state 0 22 kOz8dof;=eJ87`Zoz^4QM1
+l20
+L17
+V_N@6?`GNPDdKoSfYg?50K1
+R8
+32
+R40
+R41
+R42
+R12
+R13
+!s100 dU7hze<]I^d7FLF>JTO=d1
+!i10b 1
+Epalu
+R14
+R2
+Z43 DPx8 synopsys 10 attributes 0 22 J^T`lPA_8_J<l8kQiVE]>2
+Z44 DPx4 ieee 14 std_logic_misc 0 22 >dU:RInm^_6_mBJ^<6QGY2
+R3
+R4
+R5
+Z45 8/mnt/extrastor/pws/pproc/alu.vhd
+Z46 F/mnt/extrastor/pws/pproc/alu.vhd
+l0
+L8
+VZ>e?7mSSPKMgV8OIcX>dJ0
+R8
+32
+Z47 !s108 1362963472.391223
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/alu.vhd|
+Z49 !s107 /mnt/extrastor/pws/pproc/alu.vhd|
+R12
+R13
+!s100 LP^fa849e`X3iEChkJnf`2
+!i10b 1
+Artl
+R2
+R43
+R44
+R3
+R4
+DEx4 work 4 palu 0 22 Z>e?7mSSPKMgV8OIcX>dJ0
+l35
+L19
+VjTN=AnPHVc_=C:C74l=LZ3
+R8
+32
+R47
+R48
+R49
+R12
+R13
+!s100 QSQnZjMQUH[QOoDYkiT`j1
+!i10b 1
+Eprocessor
+Z50 w1362964941
+R2
+R3
+R4
+R5
+Z51 8/mnt/extrastor/pws/pproc/processor.vhd
+Z52 F/mnt/extrastor/pws/pproc/processor.vhd
+l0
+L9
+VY@4O6TU`>2b6k_0<D7^^m0
+R8
+32
+Z53 !s108 1362964944.181798
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/processor.vhd|
+Z55 !s107 /mnt/extrastor/pws/pproc/processor.vhd|
+R12
+R13
+!s100 ieOajdog3iWSNmjd`VoNn1
+!i10b 1
+Aparch
+R2
+R3
+R4
+DEx4 work 9 processor 0 22 Y@4O6TU`>2b6k_0<D7^^m0
+l107
+L16
+VgPD8?[9:De?QA1=A8VzkF3
+R8
+32
+R53
+R54
+R55
+R12
+R13
+!s100 H[kJTWk@3e4Jj?zWXS7>G2
+!i10b 1
+Epsystem
+R31
+R1
+R2
+R3
+R4
+R5
+Z56 8/mnt/extrastor/pws/pproc/psystem.vhd
+Z57 F/mnt/extrastor/pws/pproc/psystem.vhd
+l0
+L8
+VQ]<M2FZlU_`SMCClTeoTa0
+R8
+32
+Z58 !s108 1362963472.101067
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/psystem.vhd|
+Z60 !s107 /mnt/extrastor/pws/pproc/psystem.vhd|
+R12
+R13
+!s100 RgJe@B0b60O7_L@c5m>Cf2
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+DEx4 work 7 psystem 0 22 Q]<M2FZlU_`SMCClTeoTa0
+l113
+L24
+VX?8dXRjfELSKBg;gohKCZ2
+R8
+32
+R58
+R59
+R60
+R12
+R13
+!s100 I<VjFgazI3Nbb^=V=VJ9k0
+!i10b 1
+Esingle_port_rom
+Z61 w1362744729
+R2
+R3
+R4
+R5
+Z62 8/mnt/extrastor/pws/pproc/testrom.vhd
+Z63 F/mnt/extrastor/pws/pproc/testrom.vhd
+l0
+L8
+V2aCS7dD6afA[EDO^Fni:H3
+R8
+32
+Z64 !s108 1362963472.657370
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/testrom.vhd|
+Z66 !s107 /mnt/extrastor/pws/pproc/testrom.vhd|
+R12
+R13
+!s100 Xi72d3A`K4^PGZmnP:lC_0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 15 single_port_rom 0 22 2aCS7dD6afA[EDO^Fni:H3
+l47
+L25
+V]9glD76BdXXI78D^dWAC31
+R8
+32
+R64
+R65
+R66
+R12
+R13
+!s100 D`cZg5@ZX3jaenCDl:>=]3
+!i10b 1
+Etb_if
+Z67 w1362965718
+R1
+R2
+R3
+R4
+R5
+Z68 8/mnt/extrastor/pws/pproc/modelsim/tb_ifetch.vhd
+Z69 F/mnt/extrastor/pws/pproc/modelsim/tb_ifetch.vhd
+l0
+L93
+V`jl^U66O`0a3SBi]`P6N?1
+!s100 <zMnWOaSibOc77^KG:FF>3
+R8
+32
+!i10b 1
+Z70 !s108 1362965761.699156
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/modelsim/tb_ifetch.vhd|
+Z72 !s107 /mnt/extrastor/pws/pproc/modelsim/tb_ifetch.vhd|
+R12
+R13
+Astructure
+R1
+R2
+R3
+R4
+Z73 DEx4 work 5 tb_if 0 22 `jl^U66O`0a3SBi]`P6N?1
+l136
+L96
+Z74 VYmVN7X7e@NQb`3NJ`Cn5Z0
+Z75 !s100 cne6_Kze1fE^;WW?P^cQN3
+R8
+32
+!i10b 1
+R70
+R71
+R72
+R12
+R13
+Etb_proc
+R14
+R3
+R4
+R5
+Z76 8/mnt/extrastor/pws/pproc/tb.vhd
+Z77 F/mnt/extrastor/pws/pproc/tb.vhd
+l0
+L99
+VCi=VZMjnklYgkW3hfVhWi1
+R8
+32
+Z78 !s108 1362963472.185196
+Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|/mnt/extrastor/pws/pproc/tb.vhd|
+Z80 !s107 /mnt/extrastor/pws/pproc/tb.vhd|
+R12
+R13
+!s100 kj>eYh`QiQl:o=AmSLZAA1
+!i10b 1
+Astructure
+R3
+R4
+DEx4 work 7 tb_proc 0 22 Ci=VZMjnklYgkW3hfVhWi1
+l145
+L102
+VnY7Q@[fJ1Z[^ZIfA_cc^?1
+R8
+32
+R78
+R79
+R80
+R12
+R13
+!s100 aB4KF0HQY5EQ5BjRPceSe0
+!i10b 1
+Etvc_psystem
+R67
+R1
+R2
+R3
+R4
+R5
+R68
+R69
+l0
+L9
+V`QYN5PB^U80b<DzI:9ooI2
+!s100 VigEzU]_>F:0Fmm>70H`L1
+R8
+32
+!i10b 1
+R70
+R71
+R72
+R12
+R13
+Abehavior
+R1
+R2
+R3
+R4
+Z81 DEx4 work 11 tvc_psystem 0 22 `QYN5PB^U80b<DzI:9ooI2
+l24
+L14
+Z82 VT6LK:X2W7Om;2ZGjM[Re<3
+Z83 !s100 n^RN?NOcFaX9n;K67i]H`2
+R8
+32
+!i10b 1
+R70
+R71
+R72
+R12
+R13

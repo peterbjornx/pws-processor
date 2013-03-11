@@ -1,0 +1,252 @@
+/mnt/extrastor/pws/pproc/clock.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/clock.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity clock_altclkctrl_6df
+-- Compiling architecture RTL of clock_altclkctrl_6df
+-- Compiling entity clock
+-- Compiling architecture RTL of clock
+
+} {} {}} /home/markwestmijze/pproc/alu.vhd {1 {vcom -work work -2002 -explicit /home/markwestmijze/pproc/alu.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package NUMERIC_STD
+-- Compiling entity palu
+-- Compiling architecture rtl of palu
+
+} {} {}} /home/jolanda_u/pproc/bram.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/bram.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bram
+-- Compiling architecture SYN of bram
+
+} {} {}} /mnt/extrastor/pws/pproc/idec.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/idec.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity idec
+-- Compiling architecture idec_cl of idec
+
+} {} {}} /home/jolanda_u/pproc/ifetch.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/ifetch.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ifetch_state
+-- Compiling architecture ifetch_state_arch of ifetch_state
+
+} {} {}} /home/jolanda_u/pproc/alu_rtl.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/alu_rtl.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity alu
+-- Compiling architecture rtl of alu
+
+} {} {}} /mnt/extrastor/pws/pproc/tb.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/tb.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity tvc_psystem
+-- Compiling architecture behavior of tvc_psystem
+-- Compiling entity tb_proc
+-- Compiling architecture structure of tb_proc
+
+} {} {}} /home/jolanda_u/pproc/dp_rtl.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/dp_rtl.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity dp
+-- Compiling architecture rtl of dp
+
+} {} {}} /home/jolanda_u/pproc/psystem.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/psystem.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity psystem
+-- Compiling architecture rtl of psystem
+
+} {} {}} /mnt/extrastor/pws/pproc/processor.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/processor.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity processor
+-- Compiling architecture parch of processor
+
+} {} {}} /home/jolanda_u/pproc/testrom.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/testrom.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity single_port_rom
+-- Compiling architecture rtl of single_port_rom
+
+} {} {}} /home/markwestmijze/pproc/proc_q.mif {0 {vcom -work work -2002 -explicit /home/markwestmijze/pproc/proc_q.mif
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+** Error: /home/markwestmijze/pproc/proc_q.mif(17): near "WIDTH": syntax error
+
+} {4.0 5.0} {}} /mnt/extrastor/pws/pproc/bram.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/bram.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bram
+-- Compiling architecture SYN of bram
+
+} {} {}} /mnt/extrastor/pws/pproc/ifetch.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/ifetch.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ifetch_state
+-- Compiling architecture ifetch_state_arch of ifetch_state
+
+} {} {}} /mnt/extrastor/pws/pproc/alu_rtl.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/alu_rtl.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity alu
+-- Compiling architecture rtl of alu
+
+} {} {}} /home/jolanda_u/pproc/alu.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/alu.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package NUMERIC_STD
+-- Compiling entity palu
+-- Compiling architecture rtl of palu
+
+} {} {}} /mnt/extrastor/pws/pproc/dp_rtl.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/dp_rtl.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity dp
+-- Compiling architecture rtl of dp
+
+} {} {}} /mnt/extrastor/pws/pproc/psystem.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/psystem.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity psystem
+-- Compiling architecture rtl of psystem
+
+} {} {}} /home/markwestmijze/pproc/ifetch.vhd {1 {vcom -work work -2002 -explicit /home/markwestmijze/pproc/ifetch.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ifetch_state
+-- Compiling architecture ifetch_state_arch of ifetch_state
+
+} {} {}} /mnt/extrastor/pws/pproc/testrom.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/testrom.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity single_port_rom
+-- Compiling architecture rtl of single_port_rom
+
+} {} {}} /home/jolanda_u/pproc/clock.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/clock.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity clock_altclkctrl_6df
+-- Compiling architecture RTL of clock_altclkctrl_6df
+-- Compiling entity clock
+-- Compiling architecture RTL of clock
+
+} {} {}} /home/jolanda_u/pproc/idec.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/idec.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity idec
+-- Compiling architecture idec_cl of idec
+
+} {} {}} /home/jolanda_u/pproc/tb.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/tb.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity tvc_psystem
+-- Compiling architecture behavior of tvc_psystem
+-- Compiling entity tb_proc
+-- Compiling architecture structure of tb_proc
+
+} {} {}} /mnt/extrastor/pws/pproc/alu.vhd {1 {vcom -work work -2002 -explicit /mnt/extrastor/pws/pproc/alu.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package NUMERIC_STD
+-- Compiling entity palu
+-- Compiling architecture rtl of palu
+
+} {} {}} /home/jolanda_u/pproc/processor.vhd {1 {vcom -work work -2002 -explicit /home/jolanda_u/pproc/processor.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity processor
+-- Compiling architecture parch of processor
+
+} {} {}} /home/markwestmijze/pproc/modelsim/tb_ifetch.vhd {1 {vcom -work work -2002 -explicit /home/markwestmijze/pproc/modelsim/tb_ifetch.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity tvc_psystem
+-- Compiling architecture behavior of tvc_psystem
+-- Compiling entity tb_if
+-- Compiling architecture structure of tb_if
+
+} {} {}}
