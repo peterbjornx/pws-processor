@@ -24,7 +24,8 @@ architecture parch of processor is
 				  lr_jump,
 				  mux_b_enable,
 				  imm_signed,
-          carry_enable,
+          			  carry_enable,
+				  lr_rw,
 				  cr_we,
 				  bus_rw,
 				  mem_read : out std_logic;
@@ -42,7 +43,7 @@ architecture parch of processor is
 				  WIDTH_OPC      : integer := 5);
 	  port (clk: in std_logic;
 			  reset: in std_logic;
-        execute,
+       			  execute,
 			  cia_we,
 			  nia_we,
 			  lr_we,
@@ -55,7 +56,8 @@ architecture parch of processor is
 			  imm_enable,
 			  mux_b_enable,
 			  imm_signed,         
-        carry_enable, 
+      			  carry_enable, 
+			  lr_rw,
 			  mem_write,
 			  mem_read : in std_logic;
 			  data_bus : inout std_logic_vector(WIDTH-1 downto 0);
@@ -93,6 +95,7 @@ architecture parch of processor is
 				cr_we,
 				r_jump,
 				lr_jump,
+				lr_wr,
 				imm_enable,
 				mux_b_enable,
 				imm_signed,
@@ -125,6 +128,7 @@ begin
 									mux_b_enable,
 									imm_signed,
 									carry_enable,
+									lr_wr,
 									mem_write,
 									mem_read,
 									data,
@@ -151,6 +155,7 @@ begin
 									mux_b_enable,
 									imm_signed,
 									carry_enable,
+									lr_wr,
 									cr_we,
 									bus_rw,
 									mem_read,

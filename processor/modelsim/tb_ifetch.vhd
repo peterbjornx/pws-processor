@@ -174,6 +174,8 @@ data <= 	x"000b0064" when x"00000000",
 	x"00000003" when x"0000000a",
 	x"80000000" when x"0000000b",
 	x"80000001" when x"0000000c",
+	x"0000000"&lcddat when  x"80000000",
+  x"0000000"&lcddat when  x"80000001",
 	x"00000000" when others;
 
 
