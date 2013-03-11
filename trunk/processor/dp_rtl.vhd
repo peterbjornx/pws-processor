@@ -24,6 +24,7 @@ entity dp is
         imm_enable,
         mux_b_enable,
         imm_signed,
+        carry_enable,
 		  mem_write,
         mem_read : in std_logic;
         data_bus : inout std_logic_vector(WIDTH-1 downto 0);
@@ -41,10 +42,12 @@ architecture rtl of dp is
   component palu is
     generic (WIDTH          : integer := WIDTH);
     port (mux_a: IN std_logic_vector(2 downto 0);
-          a,
-          b : IN std_logic_vector(WIDTH-1 downto 0);
-          c : OUT std_logic_vector(WIDTH-1 downto 0);
-      cmp_eq, cmp_lt, cmp_gt : OUT std_logic);
+      a,
+      b : IN std_logic_vector(WIDTH-1 downto 0);
+      c : OUT std_logic_vector(WIDTH-1 downto 0);
+      cmp_eq, cmp_lt, cmp_gt : OUT std_logic
+      carry_in IN std_logic;
+      carry_out OUT std_logic);
   end component;
 
 
@@ -58,7 +61,7 @@ architecture rtl of dp is
           nia, nia_next,
           lr, lr_next : unsigned(WIDTH-1 downto 0);
          
-  signal ir, cr, ir_next, cr_next : std_logic_vector(WIDTH-1 downto 0);
+  signal ir, cr, ir_next, cr_next_2, cr_next, cr_ca : std_logic_vector(WIDTH-1 downto 0);
   
   -- stuff for other signals, muxes
   
@@ -67,7 +70,7 @@ architecture rtl of dp is
           imm_extended,
           imm_expanded : unsigned(WIDTH-1 downto 0);
   
-  signal cmp_eq, cmp_lt, cmp_gt : std_logic;
+  signal cmp_eq, cmp_lt, cmp_gt, carry_in, carry_out, cr_we_2 : std_logic;
   
   signal ra_out,
          rb_out,
@@ -78,7 +81,8 @@ architecture rtl of dp is
          mux_b,
          mux_c,
          imm_val,
-         alu_out : std_logic_vector(WIDTH-1 downto 0);
+         alu_out,
+: std_logic_vector(WIDTH-1 downto 0);
   
   signal ra,
          rb,
@@ -88,20 +92,24 @@ architecture rtl of dp is
   
 begin
   
-  alu_inst : palu port map(mux_a => aluop, a => mux_b, b => mux_c, c => alu_out, cmp_eq => cmp_eq, cmp_lt => cmp_lt, cmp_gt => cmp_gt);
+  alu_inst : palu port map(mux_a => aluop, a => mux_b, b => mux_c, c => alu_out, cmp_eq => cmp_eq, cmp_lt => cmp_lt, cmp_gt => cmp_gt, carry_in => carry_in, carry_out => carry_out);
   
   nia_next <= (nia_base+nia_offset) when nia_we = '1' else nia; 
   cia_next <= nia 						when cia_we = '1' else cia;   
   lr_next  <= cia 						when lr_we = '1'	else lr;
   ir_next  <= data_bus	 				when ir_we = '1'	else ir;  
   ra_next  <= ra_in						when ra_we = '1'	else ra_out;
-  cr_next  <= cr_in						when cr_we = '1'	else cr;
-  
+  cr_next_2 <= cr_in						when cr_we = '1'	else cr_ca;
+  cr_next  <= cr_next_2  					when cr_we_2 = '1'	else cr;
   nia_base <= lr when lr_jump = '1' else cia;  
   nia_offset <= to_unsigned(1, WIDTH) when r_jump = '0' else unsigned(mux_c);
   
+  carry_in <= cr(3) and carry_enable;
+  
+  cr_we_2 <= carry_enable or cr_we;
+
   cr_in <= x"0000000" & '0' & cmp_gt & cmp_eq & cmp_lt;
-   
+  cr_ca <= x"0000000" & carry_out & cr(2 downto 0); 
   ir_o <= ir;
   cr_o <= cr;
   
