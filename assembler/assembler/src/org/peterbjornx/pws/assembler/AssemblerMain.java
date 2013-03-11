@@ -7,6 +7,10 @@ import org.peterbjornx.pws.assembler.linker.SimpleLinker;
 import org.peterbjornx.pws.assembler.util.AssemblerException;
 import org.peterbjornx.pws.assembler.parser.impl.SimpleParser;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
 /**
  *
  * Part of Peter Bosch's final assignment
@@ -14,22 +18,33 @@ import org.peterbjornx.pws.assembler.parser.impl.SimpleParser;
  */
 public class AssemblerMain {
     public static void main(String[] args) {
-        SimpleParser p = new SimpleParser();
-        final PwsCodeGenerator g;
-        ExecutableProgram exec;
         try {
-            System.out.println("Parsing...");
-            p.parseFile("assembler/test.s");
-            System.out.println("Generating code...");
-            g = new PwsCodeGenerator("assembler/test.o", p.getProgram());
-            g.generate();
-            System.out.println("Linking...");
-            exec = SimpleLinker.linkSingleObject(g.getObjectProgram(),"assembler/test.vhd");
-            System.out.println("Generating VHDL...");
-            VHDLSelectBinaryFormat.generateVHDL(System.out,exec);
-            System.out.println("done.");
+            if (args.length != 2)
+                usage();
+            SimpleParser parser = new SimpleParser();
+            System.out.println("Assembling "+args[0]);
+            parser.parseFile(args[0]);
+            PwsCodeGenerator codegen = new PwsCodeGenerator(args[0], parser.getProgram());
+            codegen.generate();
+            System.out.println("Linking "+args[0]);
+            ExecutableProgram ex = SimpleLinker.linkSingleObject(codegen.getObjectProgram(), args[0]);
+            System.out.println("Generating VHDL ROM...");
+            PrintStream ps = null;
+            try {
+                ps = new PrintStream(new FileOutputStream(args[1]));
+            } catch (FileNotFoundException e) {
+                throw new AssemblerException(-1, "fatal error: could not create file", args[1]);
+            }
+            VHDLSelectBinaryFormat.generateVHDL(ps, ex);
+            ps.flush();
+            ps.close();
         } catch (AssemblerException e) {
             System.err.println(e.getFile()+":"+e.getLineNumber()+" "+e.getMessage());
         }
+    }
+
+    private static void usage() {
+        System.err.println("Usage: pwsasm <input>.s <output>.vhd");
+        System.exit(-1);
     }
 }

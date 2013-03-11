@@ -1,2 +1,317 @@
 # OpenFile {C:/Documents and Settings/010354/Mijn documenten/PWSsvn/processor/modelsim/sim_pproc.mpf} 
 # Loading project sim_pproc
+# Compile of tb_ifetch.vhd was successful.
+# Compile of tb_ifetch.vhd was successful.
+# Compile of processor.vhd was successful.
+# Compile of processor.vhd was successful.
+vsim work.tb_if
+# vsim work.tb_if 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tb_if(structure)
+# Loading work.processor(parch)
+# Loading work.dp(rtl)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.palu(rtl)
+# Loading work.ifetch_state(ifetch_state_arch)
+# Loading work.idec(idec_cl)
+# Loading work.tvc_psystem(behavior)
+do {C:/Documents and Settings/010354/Mijn documenten/PWSsvn/processor/modelsim/wave.do}
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: peterbjornx  Hostname: ubuntu  ProcessID: 13769
+# 
+#           Attempting to use alternate WLF file "./wlft882yfk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft882yfk
+# 
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+add wave -position end  sim:/tb_if/proc/cr
+restart
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# Compile of tb_ifetch.vhd was successful.
+restart
+# Loading work.tb_if(structure)
+# Loading work.tvc_psystem(behavior)
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 21200 ns  Iteration: 6  Instance: /tb_if/proc/dp_inst/alu_inst
+# Compile of bus_if.v was successful.
+# Compile of alu_rtl.vhd was successful.
+# Compile of bram.vhd was successful.
+# Compile of dp_rtl.vhd was successful.
+# Compile of psystem.vhd was successful.
+# Compile of clock.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of ifetch.vhd was successful.
+# Compile of tb_ifetch.vhd was successful.
+# Compile of idec.vhd was successful.
+# Compile of processor.vhd was successful.
+# Compile of testrom.vhd was successful.
+# Compile of lcd_control.v was successful.
+# Compile of bus_if.v was successful.
+# Compile of command_if.v was successful.
+# Compile of init_detector.v was successful.
+# 15 compiles, 0 failed with no errors. 
+source ../lcd/lcd_gui.tcl
+# Tk unavailable; GUI disabled. 
+# Compile of tb_ifetch.vhd was successful with warnings.
+# Compile of tb_ifetch.vhd was successful with warnings.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd was successful with warnings.
+# Compile of tb_ifetch.vhd was successful with warnings.
+# Compile of tb_ifetch.vhd was successful with warnings.
+# Compile of tb_ifetch.vhd was successful with warnings.
+# Compile of tb_ifetch.vhd failed with 1 errors.
+# Compile of tb_ifetch.vhd failed with 2 errors.
+# Compile of tb_ifetch.vhd was successful.
+# Compile of tb_ifetch.vhd failed with 2 errors.
+# Compile of tb_ifetch.vhd was successful.
+quit -sim
+vsim work.tb_if
+# vsim work.tb_if 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tb_if(structure)
+# Loading work.processor(parch)
+# Loading work.dp(rtl)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.palu(rtl)
+# Loading work.ifetch_state(ifetch_state_arch)
+# Loading work.idec(idec_cl)
+# Loading work.tvc_psystem(behavior)
+# ALTERA version supports only a single HDL
+# ** Error: (vsim-3039) C:/Documents and Settings/010354/Mijn documenten/PWSsvn/processor/modelsim/tb_ifetch.vhd(161): Instantiation of 'lcd_control' failed.
+# 
+#         Region: /tb_if
+# Error loading design
+# Compile of tb_ifetch.vhd was successful.
+vsim -voptargs=+acc work.tb_if
+# vsim -voptargs=+acc work.tb_if 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tb_if(structure)
+# Loading work.processor(parch)
+# Loading work.dp(rtl)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.palu(rtl)
+# Loading work.ifetch_state(ifetch_state_arch)
+# Loading work.idec(idec_cl)
+# Loading work.tvc_psystem(behavior)
+add wave -position end  sim:/tb_if/clock
+add wave -position end  sim:/tb_if/reset
+add wave -position end  sim:/tb_if/rw
+add wave -position end  sim:/tb_if/data
+add wave -position end  sim:/tb_if/address
+add wave -position end  sim:/tb_if/rom_addr
+add wave -position end  sim:/tb_if/lcddat
+add wave -position end  sim:/tb_if/lcdrs
+add wave -position end  sim:/tb_if/lcdrw
+add wave -position end  sim:/tb_if/lcde
+add wave -position end  sim:/tb_if/char_out
+add wave -position end  sim:/tb_if/row_out
+add wave -position end  sim:/tb_if/column_out
+add wave -position end  sim:/tb_if/char_valid
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: peterbjornx  Hostname: ubuntu  ProcessID: 13769
+# 
+#           Attempting to use alternate WLF file "./wlft3ct844".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft3ct844
+# 
+# Compile of tb_ifetch.vhd was successful.
+# Compile of tb_ifetch.vhd was successful.
+# Compile of tb_ifetch.vhd was successful.
+# Compile of tb_ifetch.vhd was successful.
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 21200 ns  Iteration: 6  Instance: /tb_if/proc/dp_inst/alu_inst
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(31)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(30)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(29)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(28)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(27)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(26)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(25)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(24)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(23)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(22)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(21)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(20)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(19)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(18)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(17)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(16)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(15)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(14)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(13)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(12)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(11)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(10)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(9)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(8)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(7)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(6)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(5)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(4)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(3)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(2)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(1)
+add wave -position end  sim:/tb_if/proc/dp_inst/reg(0)
+restart
+# Loading work.tb_if(structure)
+# Loading work.tvc_psystem(behavior)
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 6  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 9  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 9  Instance: /tb_if/proc/dp_inst/alu_inst
+# Compile of processor.vhd was successful.
+# Compile of tb_ifetch.vhd was successful.
+# Compile of tb_ifetch.vhd was successful.
+# Compile of tb_ifetch.vhd was successful.
+restart
+# Loading work.tb_if(structure)
+# Loading work.processor(parch)
+# Loading work.tvc_psystem(behavior)
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 4  Instance: /tb_if/proc/dp_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 6  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 9  Instance: /tb_if/proc/dp_inst/alu_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 9  Instance: /tb_if/proc/dp_inst/alu_inst

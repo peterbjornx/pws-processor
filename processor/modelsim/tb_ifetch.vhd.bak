@@ -6,6 +6,8 @@ use ieee.std_logic_textio.all;
 use std.textio.all;
 
 
+
+
 entity tvc_psystem is
   port (clock, reset : out std_logic);
 end tvc_psystem;
@@ -112,6 +114,17 @@ architecture structure of tb_if is
 
 	end component;
 	
+	component lcd_control is
+	  port (
+	    lcddat : in std_logic_vector(3 downto 0);
+	    lcdrs, lcdrw, lcde : in std_logic;
+	    char_out : out std_logic_vector(7 downto 0);
+	    row_out : out std_logic;
+	    column_out : out std_logic_vector(3 downto 0);
+	    char_valid : out std_logic
+	    );
+	end component;
+	
   component tvc_psystem is
   -- note that the signals are the same as in the entity siso8 
   -- where inputs have become outputs and vice versa 
@@ -133,14 +146,42 @@ architecture structure of tb_if is
   signal address : std_logic_vector (31 downto 0);
   signal rom_addr : natural range 0 to 255;
   
+  signal lcddat : std_logic_vector(3 downto 0);
+	signal lcdrs, lcdrw, lcde : std_logic;
+	signal char_out : std_logic_vector(7 downto 0);
+	signal row_out : std_logic;
+	signal column_out : std_logic_vector(3 downto 0);
+	signal char_valid : std_logic;
+
 begin
   -- instantiate and interconnect components
 	proc : processor port map (data, address, clock, reset, rw);
 	cgen : tvc_psystem port map (clock, reset);
+	--lcdc : lcd_control port map( lcddat, lcdrs, lcdrw, lcde, char_out,
+--	 row_out, column_out, char_valid);
 	--trom : single_port_rom port map (clock, rom_addr, data);
 	with address select
-	
-	   data <=  x"FFFE0037" when x"00000003",
-	             x"00000047" when others;
+data <= 	x"000a0064" when x"00000000",
+	x"000b0084" when x"00000001",
+	x"00000c04" when x"00000002",
+	x"00001024" when x"00000003",
+	x"000c002c" when x"00000004",
+	x"000c000c" when x"00000005",
+	x"00000001" when x"00000006",
+	x"00000000" when x"00000007",
+	x"0000000c" when x"00000008",
+	x"00000000" when x"00000009",
+	x"00000008" when x"0000000a",
+	x"00000003" when x"0000000b",
+	x"80000000" when x"0000000c",
+	x"80000001" when x"0000000d",
+	x"00000000" when others;
+
+lcdrs <= address(0);
+lcdrw <= rw;
+lcde <= not (clock and address(31) and not rw);
+lcddat <= data(3 downto 0);
+
+
 end structure;
 
