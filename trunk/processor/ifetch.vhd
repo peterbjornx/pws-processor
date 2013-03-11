@@ -8,8 +8,8 @@ entity ifetch_state is
 port(
   clock_p1, reset : in std_logic;
   cia_we, nia_we, lr_we, ir_we : out std_logic;
-  addr_source,bus_rw,ra_we : out std_logic;
-  store_lr,bus_rw_in,ra_we_in : in std_logic
+  addr_source, execute : out std_logic;
+  store_lr : in std_logic
 );
 end ifetch_state;
 
@@ -39,11 +39,8 @@ begin
  		addr_source <=	'1'			when load_cia_fetch,	--addr <= nia
 							'0'			when others;			--addr <= alu_result
  	with state select
- 		bus_rw		<=	bus_rw_in	when execute,			--let instruction decide bus direction
-							'1'			when others;			--bus has to be in read mode for IF;
- 	with state select
- 		ra_we		<=	ra_we_in	when execute,			--let instruction decide bus direction
-							'0'			when others;			--bus has to be in read mode for IF;
+ 		execute  	<=	'1'      when execute,			
+                    '0'			when others;		 
  	with state select
  		nia_we		<=	'1'			when load_nia,
 							'0'			when others;
