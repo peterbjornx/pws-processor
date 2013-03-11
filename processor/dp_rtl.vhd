@@ -12,6 +12,7 @@ entity dp is
            WIDTH_OPC      : integer := 5);
   port (clk: in std_logic;
         reset: in std_logic;
+        execute,
         cia_we,
         nia_we,
         lr_we,
@@ -70,7 +71,7 @@ architecture rtl of dp is
           imm_extended,
           imm_expanded : unsigned(WIDTH-1 downto 0);
   
-  signal cmp_eq, cmp_lt, cmp_gt, carry_in, carry_out, cr_we_2 : std_logic;
+  signal cmp_eq, cmp_lt, cmp_gt, carry_in, carry_out, cr_we_2, ra_we_2 : std_logic;
   
   signal ra_out,
          rb_out,
@@ -98,7 +99,7 @@ begin
   cia_next <= nia 						when cia_we = '1' else cia;   
   lr_next  <= cia 						when lr_we = '1'	else lr;
   ir_next  <= data_bus	 				when ir_we = '1'	else ir;  
-  ra_next  <= ra_in						when ra_we = '1'	else ra_out;
+  ra_next  <= ra_in						when ra_we_2 = '1'	else ra_out;
   cr_next_2 <= cr_in						when cr_we = '1'	else cr_ca;
   cr_next  <= cr_next_2  					when cr_we_2 = '1'	else cr;
   nia_base <= lr when lr_jump = '1' else cia;  
@@ -106,8 +107,10 @@ begin
   
   carry_in <= cr(3) and carry_enable;
   
-  cr_we_2 <= carry_enable or cr_we;
-
+  cr_we_2 <= execute & (carry_enable or cr_we);
+  
+  ra_we_2 <= execute & ra_we;
+  
   cr_in <= x"0000000" & '0' & cmp_gt & cmp_eq & cmp_lt;
   cr_ca <= x"0000000" & carry_out & cr(2 downto 0); 
   ir_o <= ir;
