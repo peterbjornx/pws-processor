@@ -24,6 +24,7 @@ architecture parch of processor is
 				  lr_jump,
 				  mux_b_enable,
 				  imm_signed,
+          carry_enable,
 				  cr_we,
 				  bus_rw,
 				  mem_read : out std_logic;
@@ -123,6 +124,7 @@ begin
 									imm_enable,
 									mux_b_enable,
 									imm_signed,
+                  carry_enable,
 									mem_write,
 									mem_read,
 									data,
@@ -148,6 +150,7 @@ begin
 									lr_jump,
 									mux_b_enable,
 									imm_signed,
+                  carry_enable,
 									cr_we,
 									bus_rw,
 									mem_read,
