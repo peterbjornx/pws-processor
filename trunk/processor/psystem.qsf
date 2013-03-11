@@ -335,10 +335,13 @@ set_location_assignment PIN_T8 -to SRAM_OE_N
 set_location_assignment PIN_W7 -to SRAM_UB_N
 set_location_assignment PIN_AA10 -to SRAM_WE_N
 set_location_assignment PIN_AB15 -to FL_CE_N
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE processor.vhd
+set_global_assignment -name VHDL_FILE ifetch.vhd
+set_global_assignment -name VHDL_FILE idec.vhd
+set_global_assignment -name VHDL_FILE alu.vhd
 set_global_assignment -name VHDL_FILE clock.vhd
 set_global_assignment -name VHDL_FILE tb.vhd
 set_global_assignment -name VHDL_FILE dp_rtl.vhd
 set_global_assignment -name VHDL_FILE bram.vhd
-set_global_assignment -name VHDL_FILE alu_rtl.vhd
 set_global_assignment -name VHDL_FILE psystem.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
