@@ -52,7 +52,8 @@ architecture parch of processor is
 			  lr_jump,
 			  imm_enable,
 			  mux_b_enable,
-			  imm_signed,
+			  imm_signed,         
+        carry_enable, 
 			  mem_write,
 			  mem_read : in std_logic;
 			  data_bus : inout std_logic_vector(WIDTH-1 downto 0);
@@ -84,8 +85,7 @@ architecture parch of processor is
 	--idec signals
 	signal cr : std_logic_vector(31 downto 0);
 	signal ir : std_logic_vector(31 downto 0);
-   	signal bus_rw_id : std_logic;	
-   	signal ra_we_id : std_logic;		
+  signal execute : std_logic;	
 	--dp signals
 	signal 		ra_we,
 				cr_we,
@@ -94,6 +94,7 @@ architecture parch of processor is
 				imm_enable,
 				mux_b_enable,
 				imm_signed,
+        carry_enable,
 				mem_write,
 				mem_read : std_logic;
 	 signal aluop : std_logic_vector(2 downto 0);
@@ -135,27 +136,25 @@ begin
 									lr_we, 
 									ir_we,
 									addr_source,
-									bus_rw,
-									ra_we,
 									store_lr,
-									bus_rw_id,
-									ra_we_id);
+									execute);
 	id_inst : idec port map(clock,
 									reset,
-									ra_we_id,
+                  execute,
+									ra_we,
 									r_jump,
 									imm_enable,
 									lr_jump,
 									mux_b_enable,
 									imm_signed,
 									cr_we,
-									bus_rw_id,
+									bus_rw,
 									mem_read,
 									store_lr,
 									ir,
 									cr,
 									aluop);
-	mem_write <= not bus_rw;
+	mem_write <= execute and not bus_rw;
 	address <= addr_bus;
-	rw <= bus_rw;
+	rw <= bus_rw or not execute;
 end parch;
