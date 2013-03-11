@@ -41,6 +41,7 @@ architecture parch of processor is
 				  WIDTH_OPC      : integer := 5);
 	  port (clk: in std_logic;
 			  reset: in std_logic;
+        execute,
 			  cia_we,
 			  nia_we,
 			  lr_we,
@@ -69,8 +70,8 @@ architecture parch of processor is
 				port(
 				  clock_p1, reset : in std_logic ;
 				  cia_we, nia_we, lr_we, ir_we : out std_logic;
-				  addr_source, bus_rw, ra_we : out std_logic;
-				  store_lr, bus_rw_in, ra_we_in : in std_logic
+				  addr_source, execute: out std_logic;
+				  store_lr: in std_logic
 				);
 	end component;
 	
@@ -109,6 +110,7 @@ begin
 	dp_inst : dp port map(
 									clock,
 									reset,
+                  execute,
 									cia_we,
 									nia_we,
 									lr_we,
@@ -136,11 +138,10 @@ begin
 									lr_we, 
 									ir_we,
 									addr_source,
-									store_lr,
-									execute);
+                  execute
+									store_lr);
 	id_inst : idec port map(clock,
 									reset,
-                  execute,
 									ra_we,
 									r_jump,
 									imm_enable,
