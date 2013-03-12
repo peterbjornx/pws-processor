@@ -7,9 +7,10 @@ use std.textio.all;
 
 
 entity processor is
-port (data : inout std_logic_vector (31 downto 0);
-		address : out std_logic_vector (31 downto 0);
-		clock, reset  : in std_logic;
+port (	       data_in	     : in  std_logic_vector (31 downto 0);
+		data_out	: out std_logic_vector (31 downto 0);
+		address		: out std_logic_vector (31 downto 0);
+		clock, reset	: in std_logic;
 		rw : out std_logic);
 end processor;
 
@@ -60,8 +61,8 @@ architecture parch of processor is
 			  lr_rw,
 			  mem_write,
 			  mem_read : in std_logic;
-			  data_bus : inout std_logic_vector(WIDTH-1 downto 0);
-			--  data_bus_out : out std_logic_vector(WIDTH-1 downto 0);
+			  data_bus_in : in std_logic_vector(WIDTH-1 downto 0);
+			  data_bus_out : out std_logic_vector(WIDTH-1 downto 0);
 			  addr_bus : out std_logic_vector(WIDTH-1 downto 0);
 			  ir_o,
 			  cr_o : out std_logic_vector(WIDTH-1 downto 0);
@@ -131,7 +132,8 @@ begin
 									lr_wr,
 									mem_write,
 									mem_read,
-									data,
+									data_in,
+									data_out,
 									addr_bus,
 									ir,
 									cr,

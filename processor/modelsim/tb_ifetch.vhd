@@ -133,16 +133,18 @@ architecture structure of tb_if is
 	end component;
 	
 	component processor is
-	port (data : inout std_logic_vector (31 downto 0);
-			address : out std_logic_vector (31 downto 0);
-			clock, reset  : in std_logic;
-			rw : out std_logic);
+	port (	       data_in	     : in  std_logic_vector (31 downto 0);
+		data_out	: out std_logic_vector (31 downto 0);
+		address		: out std_logic_vector (31 downto 0);
+		clock, reset	: in std_logic;
+		rw : out std_logic);
 	end component;
 
   -- declare local signals
   
   signal clock, reset, rw : std_logic;
-  signal data : std_logic_vector (31 downto 0);
+  signal data_in : std_logic_vector (31 downto 0);
+  signal data_out : std_logic_vector (31 downto 0);
   signal address : std_logic_vector (31 downto 0);
   signal rom_addr : natural range 0 to 255;
   
@@ -155,16 +157,16 @@ architecture structure of tb_if is
 
 begin
   -- instantiate and interconnect components
-	proc : processor port map (data, address, clock, reset, rw);
+	proc : processor port map (data_in, data_out, address, clock, reset, rw);
 	cgen : tvc_psystem port map (clock, reset);
 	--lcdc : lcd_control port map( lcddat, lcdrs, lcdrw, lcde, char_out,
 --	 row_out, column_out, char_valid);
 	--trom : single_port_rom port map (clock, rom_addr, data);
 	with address select
-data <= 	x"000b0064" when x"00000000",
-	x"00000c04" when x"00000001",
-	x"00001024" when x"00000002",
-	x"00000c2c" when x"00000003",
+data_in <= 	x"000b0064" when x"00000000",
+	x"000a0004" when x"00000001",
+	x"00000c0c" when x"00000002",
+	x"00090004" when x"00000003",
 	x"00000c0c" when x"00000004",
 	x"00000001" when x"00000005",
 	x"00000000" when x"00000006",
@@ -174,15 +176,14 @@ data <= 	x"000b0064" when x"00000000",
 	x"00000003" when x"0000000a",
 	x"80000000" when x"0000000b",
 	x"80000001" when x"0000000c",
-	x"0000000"&lcddat when  x"80000000",
-  x"0000000"&lcddat when  x"80000001",
 	x"00000000" when others;
+
 
 
 lcdrs <= address(0);
 lcdrw <= rw;
 lcde <= not (clock and address(31) and not rw);
-lcddat <= data(3 downto 0);
+lcddat <= data_out(3 downto 0);
 
 
 end structure;
