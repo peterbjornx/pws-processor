@@ -29,8 +29,8 @@ entity dp is
 	lr_rw,
 	mem_write,
         mem_read : in std_logic;
-        data_bus : inout std_logic_vector(WIDTH-1 downto 0);
-      --  data_bus : out std_logic_vector(WIDTH-1 downto 0);
+        data_bus_in  : in  std_logic_vector(WIDTH-1 downto 0);
+        data_bus_out : out std_logic_vector(WIDTH-1 downto 0);
         addr_bus : out std_logic_vector(WIDTH-1 downto 0);
         ir_o,
         cr_o : out std_logic_vector(WIDTH-1 downto 0);
@@ -102,7 +102,7 @@ begin
   nia_next	<= (nia_base+nia_offset)			when nia_we = '1'	else nia; 
   cia_next	<= nia 						when cia_we = '1'	else cia;   
   lr_next	<= lr_in 					when lr_we_2 = '1'	else lr;
-  ir_next	<= data_bus	 				when ir_we = '1'	else ir;  
+  ir_next	<= data_bus_in	 				when ir_we = '1'	else ir;  
   ra_next	<= ra_in					when ra_we_2 = '1'	else ra_out;
   cr_next_2	<= cr_in					when cr_we = '1'	else cr_ca;
   cr_next	<= cr_next_2  					when cr_we_2 = '1'	else cr;
@@ -143,7 +143,7 @@ begin
   ra_src <= mem_read & lr_rw;
 
   with ra_src select
-	ra_in <= data_bus 			when "10",
+	ra_in <= data_bus_in 			when "10",
 	         alu_out			when "00",
 		 std_logic_vector(lr)  		when "01",
 		 alu_out  			when others; 
@@ -151,7 +151,7 @@ begin
   
   addr_bus <= std_logic_vector(nia) when addr_source='1' else alu_out;
   
-  data_bus <= ra_out when mem_write = '1' else (others => 'Z');
+  data_bus_out <= ra_out when mem_write = '1' else (others => 'Z');
   
   process(clk, reset)
   begin    
