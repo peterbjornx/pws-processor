@@ -70,7 +70,7 @@ begin
 	mem_read			<= loadstore_op;					--It is not a problem if mem_read
 												--is high during a write, it only
 												--selects the writeback source.
-	lr_rw				<= ir_rw;
+	lr_rw				<= loadstore_op and ir_lr;
 																		
 	bus_rw				<= (loadstore_op and not ir_lr) nand ir_rw;		--bus_rw is Read/~Write		
 	load_op				<= loadstore_op and not ir_rw;				--Read Ra when storing 		
