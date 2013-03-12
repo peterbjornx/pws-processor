@@ -1,7 +1,7 @@
 _start:			l r3, &LCD_CTRL
-			l r0, r3
-			l r1, r4
-			s r1, r3
+			l r0, &_lcd_init_cmd_h
+			s r0, r3
+			l r0, &_lcd_init_cmd_l
 			s r0, r3
 			
 

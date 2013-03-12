@@ -182,7 +182,7 @@ data_in <= 	x"000b0064" when x"00000000",
 
 lcdrs <= address(0);
 lcdrw <= rw;
-lcde <= not (clock and address(31) and not rw);
+lcde <= clock and address(31) and not rw;
 lcddat <= data_out(3 downto 0);
 
 
