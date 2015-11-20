@@ -1,11 +1,15 @@
 package org.peterbjornx.pws.assembler.codegen.impl;
 
+import org.peterbjornx.pws.assembler.parser.AssemblyConstant;
+import org.peterbjornx.pws.assembler.parser.AssemblyEntity;
+import org.peterbjornx.pws.assembler.parser.AssemblyInstruction;
+import org.peterbjornx.pws.assembler.parser.AssemblyProgram;
+import org.peterbjornx.pws.assembler.targets.P2InstructionSet;
+import org.peterbjornx.pws.assembler.targets.PwsInstructionSet;
 import org.peterbjornx.pws.assembler.util.AssemblerException;
 import org.peterbjornx.pws.assembler.util.CodeSegment;
 import org.peterbjornx.pws.assembler.util.ObjectProgram;
 import org.peterbjornx.pws.assembler.util.SymbolReference;
-import org.peterbjornx.pws.assembler.parser.*;
-import org.peterbjornx.pws.assembler.targets.PwsInstructionSet;
 
 import java.util.LinkedList;
 
@@ -14,13 +18,13 @@ import java.util.LinkedList;
  *
  * @author peterbjornx
  */
-public class PwsCodeGenerator {
+public class P2CodeGenerator {
 
     private ObjectProgram objectProgram;
     private AssemblyProgram inputProgram;
 
 
-    public PwsCodeGenerator(String filename, AssemblyProgram input) {
+    public P2CodeGenerator(String filename, AssemblyProgram input) {
         inputProgram = input;
         objectProgram = new ObjectProgram(filename);
     }
@@ -162,5 +166,43 @@ public class PwsCodeGenerator {
     }
     public ObjectProgram getObjectProgram() {
         return objectProgram;
+    }
+
+    public long encodeRegIndexedAddress(int baseReg, int indexReg, int multiplier)
+    {
+        long iw = 0;
+        iw |= P2InstructionSet.IDX_BIT;
+        iw |= (baseReg & P2InstructionSet.REGISTER_MASK) << P2InstructionSet.REG_B_START;
+        iw |= (indexReg & P2InstructionSet.REGISTER_MASK) << P2InstructionSet.REG_C_START;
+        iw |= (multiplier & P2InstructionSet.IMMS_MASK) << P2InstructionSet.IMMS_START;
+        return iw;
+    }
+
+    public long encodeRegOffsetAddress(int baseReg, int offset)
+    {
+        long iw = 0;
+        iw |= P2InstructionSet.IDX_BIT;
+        iw |= (baseReg & P2InstructionSet.REGISTER_MASK) << P2InstructionSet.REG_B_START;
+        iw |= (offset & P2InstructionSet.IMMW_MASK) << P2InstructionSet.IMMW_START;
+        return iw;
+    }
+
+    public long encodePCIndexedAddress(int indexReg, int multiplier)
+    {
+        long iw = 0;
+        iw |= P2InstructionSet.IDX_BIT;
+        iw |= P2InstructionSet.PCREL_BIT;
+        iw |= (indexReg & P2InstructionSet.REGISTER_MASK) << P2InstructionSet.REG_C_START;
+        iw |= (multiplier & P2InstructionSet.IMMS_MASK) << P2InstructionSet.IMMS_START;
+        return iw;
+    }
+
+    public long encodePCOffsetAddress(int offset)
+    {
+        long iw = 0;
+        iw |= P2InstructionSet.IDX_BIT;
+        iw |= P2InstructionSet.PCREL_BIT;
+        iw |= (offset & P2InstructionSet.IMMW_MASK) << P2InstructionSet.IMMW_START;
+        return iw;
     }
 }

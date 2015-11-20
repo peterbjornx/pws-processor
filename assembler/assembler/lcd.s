@@ -1,18 +1,54 @@
-_start:			l r3, &LCD_CTRL
-			l r0, &_lcd_init_cmd_h
-			s r0, r3
-			l r0, &_lcd_init_cmd_l
-			s r0, r3
-			
+main:
+_mainloop:
+			xor		r0, r0, r0
+			add		r0, r0, &HELLO_WORLD
+			c		&txstr
+			b		&_mainloop
 
-_lcd_reset_cmd_l:	.dw 0b0001
-_lcd_reset_cmd_h:	.dw 0b0000
 
-_lcd_on_cmd_l:		.dw 0b1100
-_lcd_on_cmd_h:		.dw 0b0000
+txstr:
+			llr		r27
+			add		r28,	r0,		0
+_txloop:
+			l		r0,		r28
+			cmp		r0,		r0,		0
+			beq		&_txdone
+			c		&txbyte
+			add		r28,	r28,	1
+			b		&_txloop
+_txdone:
+			slr		r27
+			r
 
-_lcd_init_cmd_l:	.dw 0b1000
-_lcd_init_cmd_h:	.dw 0b0011
+txbyte:
+			llr		r31
+			c		&txwait
+			l		r30, 	&STX_DATA
+			s		r0, 	r30
+			slr		r31
+			r
 
-LCD_CTRL:		.dw 0x80000000
-LCD_DATA:		.dw 0x80000001
+txwait:
+			l		r30,	&STX_STATUS
+_txspin:
+			l		r29,	r30
+			cmp		r29,	r29,	0x00000001
+			beq 	&_txspin
+			r
+
+STX_STATUS:			.dw 0x80000000
+STX_DATA:			.dw 0x80000001
+HELLO_WORLD:		.dw 0x00000048
+					.dw 0x00000065
+					.dw 0x0000006c
+					.dw 0x0000006c
+					.dw 0x0000006f
+					.dw 0x0000002c
+					.dw 0x00000020
+					.dw 0x00000057
+					.dw 0x0000006f
+					.dw 0x00000072
+					.dw 0x0000006c
+					.dw 0x00000064
+					.dw 0x00000021
+					.dw 0x00000000

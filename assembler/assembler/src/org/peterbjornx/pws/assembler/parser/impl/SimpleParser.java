@@ -189,7 +189,12 @@ public class SimpleParser {
             } else {
                 instr = new AssemblyInstruction(programCounter, lineNumber, file);
                 instr.setMnemonic(token.toLowerCase());
-                isBranch = instr.getMnemonic().startsWith("b") || (instr.getMnemonic().startsWith("c") && !instr.getMnemonic().equals("cmp")) || instr.getMnemonic().startsWith("r");
+                isBranch = instr.getMnemonic().startsWith("b")|| instr.getMnemonic().startsWith("r") || (instr.getMnemonic().startsWith("c") && !instr.getMnemonic().equals("cmp")) ;
+                if (tokens.length == 1) {
+                    program.add(instr);
+                    programCounter++;
+                    return;
+                }
             }
         }
     }
